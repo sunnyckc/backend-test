@@ -5,8 +5,8 @@ const fs = require('fs');
 const app = express();
 
 const options = {
-  key: fs.readFileSync('/path/etc/letsencrypt/live/api.sunnyexperimental.com/privkey.pem'),
-  cert: fs.readFileSync('/path//etc/letsencrypt/live/api.sunnyexperimental.com/fullchain.pem')
+  key: fs.readFileSync('/etc/letsencrypt/live/api.sunnyexperimental.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/api.sunnyexperimental.com/fullchain.pem')
 };
 
 https.createServer(options, app).listen(443);
